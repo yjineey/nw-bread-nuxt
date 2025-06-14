@@ -41,12 +41,15 @@ pnpm postinstall
 ```bash
 newway-frontend/
 ├── .nuxt/                 # Nuxt 빌드 파일 (자동 생성)
-├── .vscode/
-├── assets/                # 정적 자산 (CSS, 이미지 등)
-├── public/                # 정적 파일 (직접 접근 가능)
+├── .vscode/               # VS Code 설정 디렉토리
+├── assets/                # CSS, SCSS, 이미지 등 정적 에셋
+├── components/            # 재사용 가능한 Vue 컴포넌트 저장소
+├── layouts/               # 페이지 레이아웃 파일
+├── pages/                 # 라우팅되는 뷰 페이지
+├── public/                # 정적 파일 경로
 ├── server/                # 서버 API 경로
 ├── .eslintrc.json         # ESLint 설정
-├── .gitignore             # 캐시 파일 무시
+├── .gitignore
 ├── .prettierrc            # prettier 설정
 ├── app.vue                # 루트 컴포넌트
 ├── nuxt.config.ts         # Nuxt 설정
