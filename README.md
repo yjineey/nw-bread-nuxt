@@ -16,6 +16,7 @@
 - 컴포넌트 작성 시 TypeScript와 Composition API 사용
 - 스타일링은 Tailwind CSS 유틸리티 클래스 활용
 - 페이지 추가는 pages/ 폴더에 Vue 파일 생성 (자동 라우팅)
+- 상태 관리가 필요한 경우 Pinia 스토어 생성
 
 ## 📦 프로젝트 설정
 
@@ -44,10 +45,13 @@ newway-frontend/
 ├── .vscode/               # VS Code 설정 디렉토리
 ├── assets/                # CSS, SCSS, 이미지 등 정적 에셋
 ├── components/            # 재사용 가능한 Vue 컴포넌트 저장소
+├── composables/            # 재사용 가능한 로직
 ├── layouts/               # 페이지 레이아웃 파일
 ├── pages/                 # 라우팅되는 뷰 페이지
 ├── public/                # 정적 파일 경로
 ├── server/                # 서버 API 경로
+├── stores/                # Pinia 스토어
+├── utils/                 # 유틸리티 함수
 ├── .eslintrc.json         # ESLint 설정
 ├── .gitignore
 ├── .prettierrc            # prettier 설정
