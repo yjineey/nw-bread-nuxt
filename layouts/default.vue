@@ -1,5 +1,10 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-white text-black">
+  <div
+    :class="[
+      'min-h-screen flex flex-col transition-colors',
+      mode === 'dark' ? 'bg-[#212121] text-gray-100' : 'bg-gray-50 text-gray-900',
+    ]"
+  >
     <!-- header -->
     <HeaderZone1 />
     <HeaderZone2 />
@@ -16,3 +21,8 @@
     <Footer />
   </div>
 </template>
+
+<script setup lang="ts">
+import { useTheme } from '@/composables/useTheme' // 전역 테마
+const { mode } = useTheme()
+</script>
