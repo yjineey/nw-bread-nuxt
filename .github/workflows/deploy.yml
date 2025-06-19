@@ -26,6 +26,7 @@ jobs:
           node-version: '22' # Node.js 버전 설정
           cache: 'pnpm'
 
+      - run: corepack enable # Corepack 활성화 (pnpm 사용을 위해)
       - run: pnpm install
       - run: pnpm generate
 
