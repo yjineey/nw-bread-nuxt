@@ -9,33 +9,33 @@
             <div class="mx-auto max-w-screen-xl h-14 flex items-center justify-between text-sm text-gray-800"
             > -->
       <div class="md:w-1/2 w-auto flex flex-wrap justify-center gap-4">
-        <a href="/bible/memory" class="flex items-center gap-1 hover:underline">
+        <NuxtLink to="/bible/memory" class="flex items-center gap-1 hover:underline">
           <BookOpenIcon class="w-5 h-5 nav-icon" />
           <span class="nav-label">오늘의 말씀</span>
-        </a>
-        <a href="/bible/qt" class="flex items-center gap-1 hover:underline">
+        </NuxtLink>
+        <NuxtLink to="/bible/qt" class="flex items-center gap-1 hover:underline">
           <ClipboardDocumentListIcon class="w-5 h-5 nav-icon" />
           <span class="nav-label">오늘의 QT</span>
-        </a>
-        <a href="/bible/reading" class="flex items-center gap-1 hover:underline">
+        </NuxtLink>
+        <NuxtLink to="/bible/reading" class="flex items-center gap-1 hover:underline">
           <BookmarkSquareIcon class="w-5 h-5 nav-icon" />
           <span class="nav-label">성경통독</span>
-        </a>
-        <a href="/bible/prayer" class="flex items-center gap-1 hover:underline">
+        </NuxtLink>
+        <NuxtLink to="/bible/prayer" class="flex items-center gap-1 hover:underline">
           <ChatBubbleLeftRightIcon class="w-5 h-5 nav-icon" />
           <span class="nav-label">보혈 선포 기도문</span>
-        </a>
+        </NuxtLink>
       </div>
       <div class="ml-auto flex items-center gap-4">
-        <a href="/auth/login" class="flex items-center gap-1 hover:underline">
+        <NuxtLink to="/auth/login" class="flex items-center gap-1 hover:underline">
           <ArrowRightOnRectangleIcon class="w-5 h-5 nav-icon" />
           <span class="nav-label">로그인</span>
-        </a>
+        </NuxtLink>
 
-        <a href="/auth/signup" class="flex items-center gap-1 hover:underline">
+        <NuxtLink to="/auth/signup" class="flex items-center gap-1 hover:underline">
           <UserPlusIcon class="w-5 h-5 nav-icon" />
           <span class="nav-label">회원가입</span>
-        </a>
+        </NuxtLink>
 
         <button
           @click="toggleTheme"

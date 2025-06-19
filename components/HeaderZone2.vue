@@ -9,19 +9,19 @@
            <div class="mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm "
       > -->
         <div class="header2-field flex gap-4">
-          <a href="/church/about" class="hover:underline">ABOUT</a>
-          <a href="/church/worship" class="hover:underline">WORSHIP</a>
-          <a href="/church/mission" class="hover:underline">MISSION</a>
+          <NuxtLink to="/church/about" class="hover:underline">ABOUT</NuxtLink>
+          <NuxtLink to="/church/worship" class="hover:underline">WORSHIP</NuxtLink>
+          <NuxtLink to="/church/mission" class="hover:underline">MISSION</NuxtLink>
         </div>
 
         <h1 class="absolute left-1/2 -translate-x-1/2 text-xl font-bold whitespace-nowrap">
-          <a href="/">NEWWAY CHURCH</a>
+          <NuxtLink to="/">NEWWAY CHURCH</NuxtLink>
         </h1>
 
         <div class="header2-field flex gap-4 justify-end">
-          <a href="/church/content" class="hover:underline">CONTENT</a>
-          <a href="/church/contact" class="hover:underline">CONTACT</a>
-          <a href="/church/events" class="hover:underline">EVENTS</a>
+          <NuxtLink to="/church/content" class="hover:underline">CONTENT</NuxtLink>
+          <NuxtLink to="/church/contact" class="hover:underline">CONTACT</NuxtLink>
+          <NuxtLink to="/church/events" class="hover:underline">EVENTS</NuxtLink>
         </div>
       </div>
     </nav>
