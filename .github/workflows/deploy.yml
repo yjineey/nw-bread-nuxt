@@ -24,11 +24,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'pnpm'
-          cache-dependency-path: '**/pnpm-lock.yaml'
 
       - run: corepack enable
       - run: corepack prepare pnpm@8.15.4 --activate # 버전 고정
+
+      # pnpm이 설치된 후에 캐시 설정
+      - uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm generate
