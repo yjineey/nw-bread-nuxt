@@ -21,14 +21,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4 # 코드 체크아웃
 
-      - uses: actions/setup-node@v4 # Node.js 환경 설정
+      - uses: actions/setup-node@v4
         with:
-          node-version: '22' # Node.js 버전 설정
+          node-version: '22'
+          pnpm-version: '8'
           cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
 
-      - run: corepack enable # Corepack 활성화
-      - run: corepack prepare pnpm@latest --activate # 최신 pnpm 버전 설치
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
       - run: pnpm generate
 
       - uses: actions/upload-pages-artifact@v3 # 빌드된 파일을 GitHub Pages에 업로드
