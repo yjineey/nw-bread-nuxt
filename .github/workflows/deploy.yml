@@ -24,9 +24,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          pnpm-version: '8'
           cache: 'pnpm'
           cache-dependency-path: '**/pnpm-lock.yaml'
+
+      - run: corepack enable
+      - run: corepack prepare pnpm@8.15.4 --activate # 버전 고정
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm generate
