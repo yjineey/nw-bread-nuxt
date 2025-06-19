@@ -1,0 +1,43 @@
+name: Deploy Newway to GitHub Pages
+
+on:
+  push:
+    branches: [main] # main 브랜치에 push될 때마다
+  workflow_dispatch: # 수동으로 워크플로우를 실행할 수 있도록 설정
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # 빌드 작업을 위한 환경 설정
+
+    env:
+      APP_BASE_URL: /newway-frontend/
+      PUBLIC_API_URL: https://github.com/yjineey/newway-frontend
+
+    steps:
+      - uses: actions/checkout@v4 # 코드 체크아웃
+
+      - uses: actions/setup-node@v4 # Node.js 환경 설정
+        with:
+          node-version: '22' # Node.js 버전 설정
+
+      - run: npm ci # 의존성 설치
+      - run: npm run generate # Nuxt.js 애플리케이션 빌드
+
+      - uses: actions/upload-pages-artifact@v3 # 빌드된 파일을 GitHub Pages에 업로드
+        with:
+          path: .output/public # 빌드된 파일 경로
+
+  deploy: # 배포 작업
+    needs: build # build 작업이 완료된 후에 실행
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4 # GitHub Pages에 배포
