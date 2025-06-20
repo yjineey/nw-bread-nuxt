@@ -1,9 +1,9 @@
 <template>
   <nav
-    :class="['sticky top-16 z-40 border-b px-4', mode === 'dark' ? 'bg-[#212121] ' : 'bg-gray-50 ']"
+    :class="['sticky top-16 z-40 border-b px-4', mode === 'dark' ? 'bg-[#222222]' : 'bg-gray-50 ']"
   >
     <div class="mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm">
-      <!-- HeaderZone3만 고정 할 때 사용-->
+      <!-- Header3만 고정 할 때 사용-->
       <!-- <header class="sticky top-0 z-50">
           <nav class="bg-white shadow">
             <div class="mx-auto max-w-screen-xl h-14 flex items-center justify-between text-sm text-gray-800"
@@ -47,6 +47,19 @@
           </span>
         </button>
 
+        <select
+          v-model="mode"
+          @change="setTheme(mode ?? 'light')"
+          :class="[
+            'border px-3 py-1 rounded',
+            mode === 'dark' ? 'bg-[#222222] text-gray-100' : 'bg-gray-50 text-gray-900',
+          ]"
+        >
+          <option v-for="t in themes" :key="t" :value="t">
+            {{ t }}
+          </option>
+        </select>
+
         <form @submit.prevent class="search-field relative">
           <input
             type="text"
@@ -75,8 +88,7 @@ import {
   SunIcon,
 } from '@heroicons/vue/24/outline'
 
-const { mode } = useTheme()
-
+const { mode, setTheme, themes } = useTheme()
 const toggleTheme = () => {
   mode.value = mode.value === 'dark' ? 'light' : 'dark'
 }

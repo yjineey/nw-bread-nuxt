@@ -1,10 +1,10 @@
 <template>
   <header
-    :class="['sticky top-0 z-50 border-b px-4', mode === 'dark' ? 'bg-[#212121]' : 'bg-gray-50']"
+    :class="['sticky top-0 z-50 border-b px-4', mode === 'dark' ? 'bg-[#222222]' : 'bg-gray-50']"
   >
     <nav class="shadow">
       <div class="relative mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm">
-        <!-- HeaderZone3만 고정 할 때 사용-->
+        <!-- Header3만 고정 할 때 사용-->
         <!-- <nav class="sticky top-0 z-40 border-b">
            <div class="mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm "
       > -->
@@ -15,7 +15,7 @@
         </div>
 
         <h1 class="absolute left-1/2 -translate-x-1/2 text-xl font-bold whitespace-nowrap">
-          <NuxtLink to="/">NEWWAY CHURCH</NuxtLink>
+          <NuxtLink to="/" class="flex items-center gap-2"> NEWWAY CHURCH </NuxtLink>
         </h1>
 
         <div class="header2-field flex gap-4 justify-end">

@@ -10,14 +10,19 @@ export default defineNuxtConfig({
   app: {
     baseURL: process.env.APP_BASE_URL || '/',
     head: {
+      title: 'NEWWAY CHURCH',
+      link: [
+        // 파비콘
+        { rel: 'icon', type: 'image/png', sizes: '196x196', href: '/nw_favicon-196.png' },
+      ],
       meta: [
         // 기본태그
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: '뉴웨이교회' },
 
         // 필수태그
-        { property: 'og:title', content: '뉴웨이교회' },
-        { property: 'og:description', content: 'NEWWAY APP' },
+        { property: 'og:title', content: 'NEWWAY CHURCH' },
+        { property: 'og:description', content: 'NEWWAY BIBLE' },
         { property: 'og:image', content: 'https://your-domain.com/og-image.jpg' },
         { property: 'og:url', content: 'https://yjineey.github.io/newway-frontend/' },
 

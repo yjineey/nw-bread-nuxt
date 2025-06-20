@@ -2,13 +2,13 @@
   <div
     :class="[
       'min-h-screen flex flex-col transition-colors',
-      mode === 'dark' ? 'bg-[#212121] text-gray-100' : 'bg-gray-50 text-gray-900',
+      mode === 'dark' ? 'bg-[#222222] text-gray-100' : 'bg-gray-50 text-gray-900',
     ]"
   >
     <!-- header -->
-    <HeaderZone1 />
-    <HeaderZone2 />
-    <HeaderZone3 />
+    <Header1 />
+    <Header2 />
+    <Header3 />
 
     <!-- main -->
     <main class="flex-1">
