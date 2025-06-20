@@ -1,4 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+const base = process.env.APP_BASE_URL || '/'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
@@ -8,12 +11,12 @@ export default defineNuxtConfig({
   // https://nuxt.com/docs/guide/deploy/github-pages
   ssr: false,
   app: {
-    baseURL: process.env.APP_BASE_URL || '/',
+    baseURL: base,
     head: {
       title: 'NEWWAY CHURCH',
       link: [
         // 파비콘
-        { rel: 'icon', type: 'image/png', sizes: '196x196', href: '/nw_favicon-196.png' },
+        { rel: 'icon', type: 'image/png', sizes: '196x196', href: `${base}nw_favicon-196.png` },
       ],
       meta: [
         // 기본태그
