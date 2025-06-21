@@ -1,7 +1,5 @@
 <template>
-  <header
-    :class="['sticky top-0 z-50 border-b px-4', mode === 'dark' ? 'bg-[#222222]' : 'bg-gray-50']"
-  >
+  <header class="bg-primary sticky top-0 z-50 px-4">
     <nav class="shadow">
       <div class="relative mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm">
         <!-- Header3만 고정 할 때 사용-->
@@ -28,9 +26,7 @@
   </header>
 </template>
 
-<script setup lang="ts">
-const { mode } = useTheme()
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 /* 모바일(기본): 좌·우 메뉴 숨김 */
