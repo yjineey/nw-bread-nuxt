@@ -1,7 +1,16 @@
 export type ThemeMode = 'light' | 'dark'
-export type ColorScheme = 'pink' | 'orange' | 'emerald' | 'blue' | 'indigo' | 'purple' | 'slate'
+export type ColorScheme =
+  | 'none'
+  | 'pink'
+  | 'orange'
+  | 'emerald'
+  | 'blue'
+  | 'indigo'
+  | 'purple'
+  | 'slate'
 
 export const colorSchemes = {
+  none: { name: 'none' },
   pink: { name: '핑크', color: '#ec4899' },
   orange: { name: '오렌지', color: '#f97316' },
   emerald: { name: '에메랄드', color: '#10b981' },
@@ -17,7 +26,7 @@ export const useTheme = () => {
   })
 
   const colorScheme = useCookie<ColorScheme>('color-scheme', {
-    default: () => 'indigo',
+    default: () => 'none',
   })
 
   const mode = computed(() => themeMode.value)

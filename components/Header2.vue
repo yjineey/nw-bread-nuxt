@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-primary sticky top-0 z-50 px-4">
+  <header class="bg-primary sticky top-0 z-50 px-4 border-b">
     <nav class="shadow">
       <div class="relative mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm">
         <!-- Header3만 고정 할 때 사용-->
