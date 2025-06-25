@@ -10,7 +10,11 @@
       </div>
     </main>
 
-    <Footer />
+    <!-- 데스크톱 Footer -->
+    <FooterDesktop class="hidden md:block" />
+
+    <!-- 모바일 Footer -->
+    <FooterMobile class="block md:hidden" />
   </div>
 </template>
 
