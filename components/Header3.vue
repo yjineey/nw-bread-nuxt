@@ -1,23 +1,22 @@
 <template>
+  <!-- Header3 사용 할 때-->
+  <!-- <header class="bg-primary border-theme sticky top-0 z-50 px-4 border-t">
+    <div class="mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm"> -->
   <nav class="bg-primary sticky top-16 z-40 px-4">
     <div class="mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm">
-      <!-- Header3만 고정 할 때 사용-->
-      <!-- <header class="sticky top-0 z-50">
-          <nav class="bg-white shadow">
-            <div class="mx-auto max-w-screen-xl h-14 flex items-center justify-between text-sm text-gray-800"
-            > -->
       <div class="md:w-1/2 w-auto flex flex-wrap justify-center gap-4">
-        <NuxtLink to="/bible/memory" class="flex items-center gap-1 hover:underline">
-          <BookOpenIcon class="w-5 h-5 nav-icon" />
-          <span class="nav-label">오늘의 말씀</span>
+        <NuxtLink to="/bible/reading" class="flex items-center gap-1 hover:underline">
+          <BookmarkSquareIcon class="w-5 h-5 nav-icon" />
+          <span class="nav-label">성경통독</span>
         </NuxtLink>
+
         <NuxtLink to="/bible/qt" class="flex items-center gap-1 hover:underline">
           <ClipboardDocumentListIcon class="w-5 h-5 nav-icon" />
           <span class="nav-label">오늘의 QT</span>
         </NuxtLink>
-        <NuxtLink to="/bible/reading" class="flex items-center gap-1 hover:underline">
-          <BookmarkSquareIcon class="w-5 h-5 nav-icon" />
-          <span class="nav-label">성경통독</span>
+        <NuxtLink to="/bible/memory" class="flex items-center gap-1 hover:underline">
+          <BookOpenIcon class="w-5 h-5 nav-icon" />
+          <span class="nav-label">오늘의 말씀</span>
         </NuxtLink>
         <NuxtLink to="/bible/prayer" class="flex items-center gap-1 hover:underline">
           <ChatBubbleLeftRightIcon class="w-5 h-5 nav-icon" />
@@ -40,7 +39,7 @@
           <span class="nav-label">마이페이지</span>
         </NuxtLink>
 
-        <form @submit.prevent class="search-field relative">
+        <!-- <form @submit.prevent class="search-field relative">
           <input
             type="text"
             placeholder="검색"
@@ -49,7 +48,7 @@
           <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2">
             <MagnifyingGlassIcon class="w-5 h-5" />
           </button>
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>

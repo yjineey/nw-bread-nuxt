@@ -10,6 +10,7 @@
           <NuxtLink to="/church/about" class="hover:underline">ABOUT</NuxtLink>
           <NuxtLink to="/church/worship" class="hover:underline">WORSHIP</NuxtLink>
           <NuxtLink to="/church/mission" class="hover:underline">MISSION</NuxtLink>
+          <NuxtLink to="/church/sermon" class="hover:underline">SERMON</NuxtLink>
         </div>
 
         <h1 class="absolute left-1/2 -translate-x-1/2 text-xl font-bold whitespace-nowrap">
@@ -17,9 +18,11 @@
         </h1>
 
         <div class="header2-field flex gap-4 justify-end">
-          <NuxtLink to="/church/content" class="hover:underline">CONTENT</NuxtLink>
-          <NuxtLink to="/church/contact" class="hover:underline">CONTACT</NuxtLink>
-          <NuxtLink to="/church/events" class="hover:underline">EVENTS</NuxtLink>
+          <NuxtLink to="/church/bulletin" class="hover:underline">BULLETIN</NuxtLink>
+          <NuxtLink to="/church/schedule" class="hover:underline">SCHEDULE</NuxtLink>
+
+          <NuxtLink to="/church/gallery" class="hover:underline">GALLERY</NuxtLink>
+          <NuxtLink to="/church/location" class="hover:underline">LOCATION</NuxtLink>
         </div>
       </div>
     </nav>
