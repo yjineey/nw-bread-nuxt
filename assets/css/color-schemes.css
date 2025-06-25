@@ -18,7 +18,7 @@
 
 [data-color-scheme='none'] .btn-primary {
   background-color: transparent;
-  color: #384151;
+  color: #4b5563;
   border: 1px solid #d2d5db;
 }
 
@@ -106,6 +106,24 @@
   border-color: var(--color-theme);
 }
 
+[data-color-scheme='none'] .border-theme {
+  border-color: #4b5563;
+}
+
+.border-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-theme);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+[data-color-scheme='none'] .border-outline {
+  background-color: transparent;
+  border: 2px solid #4b5563;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
 .border-theme-light {
   border-color: var(--color-theme-light);
 }
@@ -116,6 +134,16 @@
 
 /* ===== 버튼 ===== */
 .btn-primary {
+  border: 1px solid var(--color-theme);
+  color: #4b5563;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary-color {
   background-color: var(--color-theme);
   color: white;
   padding: 0.5rem 1rem;

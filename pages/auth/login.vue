@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-theme">
+  <div class="min-h-screen border-outline">
     <div class="min-h-screen flex items-center justify-center p-4 relative z-10">
       <div class="w-full max-w-md">
         <div class="text-center mb-8">

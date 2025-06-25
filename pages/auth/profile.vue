@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-theme">
+  <div class="min-h-screen border-outline">
     <div class="min-h-screen p-4 relative z-10">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-8 pt-8">

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary bg-theme h-24 flex items-center justify-center text-sm px-4 border-b">
+  <div class="bg-primary h-24 flex items-center justify-center text-sm px-4">
     <div class="flex flex-col items-center gap-1">
       <NuxtLink to="/" class="flex items-center">
         <img src="/logos/nw_logo.png" alt="logo" class="w-60 h-12" />
