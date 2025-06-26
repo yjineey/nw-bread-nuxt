@@ -6,20 +6,26 @@
     <div class="mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm">
       <div class="md:w-1/2 w-auto flex flex-wrap justify-center gap-4">
         <NuxtLink to="/bible/reading" class="flex items-center gap-1 hover:underline">
-          <BookmarkSquareIcon class="w-5 h-5 nav-icon" />
+          <BookOpenIcon class="w-5 h-5 nav-icon" />
           <span class="nav-label">성경통독</span>
         </NuxtLink>
-
         <NuxtLink to="/bible/qt" class="flex items-center gap-1 hover:underline">
-          <ClipboardDocumentListIcon class="w-5 h-5 nav-icon" />
+          <HeartIcon class="w-5 h-5 nav-icon" />
           <span class="nav-label">오늘의 QT</span>
         </NuxtLink>
         <NuxtLink to="/bible/memory" class="flex items-center gap-1 hover:underline">
-          <BookOpenIcon class="w-5 h-5 nav-icon" />
+          <ClipboardDocumentListIcon class="w-5 h-5 nav-icon" />
           <span class="nav-label">오늘의 말씀</span>
         </NuxtLink>
         <NuxtLink to="/bible/prayer" class="flex items-center gap-1 hover:underline">
-          <ChatBubbleLeftRightIcon class="w-5 h-5 nav-icon" />
+          <svg class="w-5 h-5 nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM12 6v10M9 10h6"
+            ></path>
+          </svg>
           <span class="nav-label">보혈 선포 기도문</span>
         </NuxtLink>
       </div>
@@ -58,12 +64,11 @@
 import {
   BookOpenIcon,
   ClipboardDocumentListIcon,
-  BookmarkSquareIcon,
-  ChatBubbleLeftRightIcon,
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
   UserIcon,
   MagnifyingGlassIcon,
+  HeartIcon,
 } from '@heroicons/vue/24/outline'
 </script>
 
