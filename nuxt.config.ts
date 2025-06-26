@@ -31,7 +31,7 @@ export default defineNuxtConfig({
         },
         {
           property: 'og:image',
-          content: 'https://yjineey.github.io/newway-frontend/logos/nw_logo.png',
+          content: 'https://cdn.imweb.me/upload/S2023020869d0205dba053/94d155e4d81c7.png',
         },
         { property: 'og:url', content: 'https://yjineey.github.io/newway-frontend/' },
 
