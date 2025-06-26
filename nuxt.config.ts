@@ -29,7 +29,10 @@ export default defineNuxtConfig({
           property: 'og:description',
           content: '뉴웨이교회에 오신 것을 환영합니다.',
         },
-        { property: 'og:image', content: '/logos/nw_logo.png' },
+        {
+          property: 'og:image',
+          content: 'https://yjineey.github.io/newway-frontend/logos/nw_logo.png',
+        },
         { property: 'og:url', content: 'https://yjineey.github.io/newway-frontend/' },
 
         // 카카오톡 전용 태그
