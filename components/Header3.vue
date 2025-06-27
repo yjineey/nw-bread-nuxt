@@ -2,7 +2,7 @@
   <!-- Header3 사용 할 때-->
   <!-- <header class="bg-primary border-theme sticky top-0 z-50 px-4 border-t">
     <div class="mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm"> -->
-  <nav class="bg-primary sticky top-16 z-40 px-4">
+  <nav class="bg-primary sticky top-16 z-40 px-4 border-theme border-b">
     <div class="mx-auto max-w-screen-xl h-16 flex items-center justify-between text-sm">
       <div class="md:w-1/2 w-auto flex flex-wrap justify-center gap-4">
         <NuxtLink to="/bible/reading" class="flex items-center gap-1 hover:underline">
