@@ -493,7 +493,7 @@
   </div>
 </template>
 <script setup lang="ts">
-const { mode, colorScheme, toggleDark, setColorScheme, colorSchemes } = useTheme()
+const { themeMode, mode, colorScheme, toggleDark, setColorScheme, colorSchemes } = useTheme()
 
 // 아이콘 컴포넌트들
 const UserIcon = {
@@ -577,12 +577,14 @@ const profileForm = ref<ProfileForm>({
 })
 
 onMounted(() => {
-  // 쿠키 기준으로 테마 설정, 모바일 환경에서 시스템 모드에 따라 테마 적용되는 오류 방지
-  if (themeMode.value === 'light' && mode.value === 'dark') {
-    toggleDark()
-  } else if (themeMode.value === 'dark' && mode.value === 'light') {
-    toggleDark()
-  }
+  nextTick(() => {
+    if (themeMode.value === mode.value) return
+    if (themeMode.value === 'light' && mode.value === 'dark') {
+      toggleDark()
+    } else if (themeMode.value === 'dark' && mode.value === 'light') {
+      toggleDark()
+    }
+  })
 })
 // 비밀번호 폼
 const passwordForm = ref<PasswordForm>({
