@@ -30,6 +30,7 @@
           </div>
 
           <div class="p-6">
+            <!-- 개인정보 탭 -->
             <div v-if="activeTab === 'profile'" class="space-y-8">
               <div class="flex items-center space-x-6 mb-8">
                 <div class="relative">
@@ -575,6 +576,14 @@ const profileForm = ref<ProfileForm>({
   birthday: '1990-01-01',
 })
 
+onMounted(() => {
+  // 쿠키 기준으로 테마 설정, 모바일 환경에서 시스템 모드에 따라 테마 적용되는 오류 방지
+  if (themeMode.value === 'light' && mode.value === 'dark') {
+    toggleDark()
+  } else if (themeMode.value === 'dark' && mode.value === 'light') {
+    toggleDark()
+  }
+})
 // 비밀번호 폼
 const passwordForm = ref<PasswordForm>({
   password: '',
