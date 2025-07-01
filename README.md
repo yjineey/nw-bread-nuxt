@@ -1,4 +1,4 @@
-# 📘 newway frontend
+# 📘 newway front nuxt
 
 뉴웨이교회 성경 웹 애플리케이션
 
@@ -40,7 +40,7 @@ pnpm postinstall
 ## 📁 프로젝트 구조
 
 ```bash
-newway-frontend/
+newway-front-nuxt/
 ├── .nuxt/                 # Nuxt 빌드 파일 (자동 생성)
 ├── .vscode/               # VS Code 설정 디렉토리
 ├── assets/                # CSS, SCSS, 이미지 등 정적 에셋

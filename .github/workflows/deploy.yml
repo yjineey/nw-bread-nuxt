@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest # 빌드 작업을 위한 환경 설정
 
     env:
-      APP_BASE_URL: /newway-frontend/
-      PUBLIC_API_URL: https://github.com/yjineey/newway-frontend
+      APP_BASE_URL: /newway-front-nuxt/
+      PUBLIC_API_URL: https://github.com/yjineey/newway-front-nuxt
 
     steps:
       - uses: actions/checkout@v4 # 코드 체크아웃
